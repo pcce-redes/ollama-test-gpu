@@ -14,7 +14,7 @@ sudo install -d -o ollama -g ollama -m 0755 /var/lib/ollama /var/cache/ollama
 sudo mkdir -p /etc/systemd/system/ollama.service.d
 sudo tee /etc/systemd/system/ollama.service.d/override.conf >/dev/null <<'EOF'
 [Service]
-Environment=HOME=/var/lib/ollama
+Environment=HOME=/var/lib/ollama OLLAMA_ORIGINS=http://127.0.0.1:8000,http://localhost:8000
 WorkingDirectory=/var/lib/ollama
 StateDirectory=ollama
 CacheDirectory=ollama
