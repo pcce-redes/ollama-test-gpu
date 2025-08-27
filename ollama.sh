@@ -1,8 +1,5 @@
 #!/bin/bash
 set -euo pipefail
-sudo apt update && sudo apt install -y curl
-curl -fsSL https://ollama.com/install.sh | sh
-sudo systemctl enable --now ollama
-ollama --version && ollama list
 
 ollama pull deepseek-r1:1.5b
+ollama run deepseek-r1:1.5b
