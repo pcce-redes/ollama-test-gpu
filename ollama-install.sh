@@ -4,6 +4,7 @@ set -euo pipefail
 echo "[1/5] Instalar dependências mínimas"
 sudo apt-get update -y
 sudo apt-get install -y curl jq
+sudo apt-get install -y nvidia-cuda-toolkit
 
 echo "[2/5] Instalar Ollama (oficial)"
 curl -fsSL https://ollama.com/install.sh | sh
