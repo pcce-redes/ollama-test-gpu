@@ -4,10 +4,10 @@ set -euo pipefail
 MODEL="${MODEL:-deepseek-r1:1.5b}"
 NUM_INSTANCES="${NUM_INSTANCES:-2}"
 BASE_PORT="${BASE_PORT:-11434}"
-BIND_HOST="${BIND_HOST:-0.0.0.0}"   # onde o servidor escuta
-CURL_HOST="${CURL_HOST:-127.0.0.1}" # onde o curl testa (loopback/IP do host)
+BIND_HOST="${BIND_HOST:-0.0.0.0}"
+CURL_HOST="${CURL_HOST:-127.0.0.1}"
 KEEP_ALIVE="${KEEP_ALIVE:-2h}"
-NUM_PARALLEL="${NUM_PARALLEL:-1}"   # OLLAMA_NUM_PARALLEL (por instância)
+NUM_PARALLEL="${NUM_PARALLEL:-2}"
 
 LOG_DIR="./logs"
 PID_DIR="./pids"
